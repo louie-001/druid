@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:postgresql://127.0.0.1:5432/activiti-demo
+      username: louie
+      password: TT0HLMKz6fPGiaih/F7r/s6zRonc9XiViRY5abqJSZTANPppXpxuMntcwuXqFEZH15v/qlE3UNnHx7pb9I3xWA==
+      driver-class-name: org.postgresql.Driver
+      filter:
+        config:
+          enabled: true
+      connection-properties: config.decrypt=true;config.decrypt.key=${public_key}
+      aop-patterns: louie.share.druid.*
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+  activiti:
+    check-process-definitions: false
+public_key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI4Xej5ccjRMTGCbD7iF57ySFSC++6tWRPmHGQxTGgjHCt4c57MfPTa6G6xV2hKB8i1rs0bA9qvf+7ab935/t6MCAwEAAQ==
+
+
